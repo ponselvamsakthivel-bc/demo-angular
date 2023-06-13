@@ -1,0 +1,19 @@
+<table id='contentToConvert'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Country</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.country }}</td>
+      <td><img [src]="user.imageUrl" /></td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="exportToPdf()">Export to PDF</button>
